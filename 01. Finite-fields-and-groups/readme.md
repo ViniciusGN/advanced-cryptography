@@ -1,4 +1,4 @@
-# Practical Work — Advanced Cryptography (Finite Fields & Groups)
+# Practical Work 1 — Advanced Cryptography (Finite Fields & Groups)
 
 Advanced Cryptography — **Group Operations and DLP**  <br>
 Vinicius MOREIRA NASCIMENTO — ENSICAEN, 3A Informatique (CyIA), 2025
@@ -13,8 +13,6 @@ This project implements core algebraic primitives used in cryptography:
 
 All tests follow the five parts described in the assignment PDF and run in order from a single script.
 
----
-
 ## Project Structure
 . <br>
 ├── README.md <br>
@@ -27,8 +25,6 @@ All tests follow the five parts described in the assignment PDF and run in order
 - `tests.py`: prints the verifications **in the same order as the five parts** of the assignment; run this file to execute everything.
 - `lab1_utils.py`: provided by the exercise (helpers for binary fields); **no changes required**.
 
----
-
 ## Execution
 Open a terminal in the repository folder and run:
 ```bash
@@ -40,8 +36,6 @@ The script will execute all checks in order (Parts 1 to 5) without additional se
 import random
 random.seed(42)
 ```
-
----
 
 ## Components
 
@@ -63,16 +57,12 @@ Constant-shape algorithm using only `law`, works across all supported groups. Ha
 - `DLbyBabyStepGiantStep(h)` — O(√N) giant-table variant aligned with the course slides.
 - `ComputeDL(h, τ)` — dispatcher: uses trial if `N ≤ τ`, otherwise BSGS.
 
----
-
 ## Features
 
 - Unified group interface for **ℤp** (add/mul) and **𝔽₂ⁿ**.
 - Clean separation of **law** and **exp** for portability and reuse.
 - **BSGS** implemented exactly as specified in the slides (precompute `g^(i·w)`).
 - Single command test runner (`python3 tests.py`) that follows the assignment’s 5 parts in order.
-
----
 
 ## Example Output
 ```bash
@@ -94,7 +84,6 @@ Fourth Verification:
 ComputeDL (tau=100) value : 222
 i value : 222
 ```
----
 
 ## Notes
 
